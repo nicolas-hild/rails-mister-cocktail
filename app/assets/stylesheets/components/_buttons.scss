@@ -1,0 +1,19 @@
+.btn-nico {
+  width: 15vw;
+  margin: 15px auto;
+  justify-content: center;
+  background-color: #C9D1D3;
+  border-radius: 50px;
+  font-weight: bold;
+  &:hover {
+  background-color: grey;
+  }
+}
+
+.btn-nico a {
+  color: #1B2A49;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}

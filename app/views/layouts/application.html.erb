@@ -12,7 +12,10 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= render 'components/navbar' %>
+    <div class="container-nico">
+      <%= yield %>
+    </div>
 
     <%= javascript_pack_tag "application" %>
   </body>

@@ -1,0 +1,19 @@
+<div class="banner-nico" style="background-image: url(<%= @cocktail.imageUrl %>)">
+  <h2 class="cocktail-name-show"><%= @cocktail.name %></h2>
+</div>
+<div class="d-flex justify-content-around cocktail-content">
+  <div class="description-bloc">
+    <%= @cocktail.description %>
+  </div>
+  <div class="ingrediensts-bloc">
+    <div class="ingredient-list-name">
+      <h3>Ingredients</h3>
+    </div>
+    <% @cocktail.doses.each do |dose| %>
+      <div class="ingredients">
+        <div><strong><%= dose.ingredient.name %>:</strong> <%= dose.description %></div>
+      </div>
+    <% end %>
+    <%= link_to "Add ingredient", new_cocktail_dose_path(@cocktail) %>
+  </div>
+</div>

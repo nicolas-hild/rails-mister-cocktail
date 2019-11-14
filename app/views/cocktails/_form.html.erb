@@ -1,0 +1,8 @@
+<div class="form-nico">
+  <%= simple_form_for(cocktail) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :imageUrl %>
+    <%= f.submit "Create a new cocktail", class: 'form-control' %>
+  <% end %>
+</div>
