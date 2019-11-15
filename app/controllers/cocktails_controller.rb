@@ -25,7 +25,7 @@ class CocktailsController < ApplicationController
   end
 
   def update
-    if @cocktail.update(cocktails_params)
+    if @cocktail.update(cocktail_params)
       redirect_to cocktail_path(@cocktail)
     else
       render :edit
@@ -35,6 +35,15 @@ class CocktailsController < ApplicationController
   def destroy
     @cocktail.destroy
     redirect_to root_path
+  end
+
+  def search
+    @cocktails = Cocktail.where(name: params[:search].capitalize)
+    if @cocktails == []
+      @cocktails = Cocktail.joins(:doses, :ingredients).where('ingredients.name' == params[:search].capitalize).uniq
+      # raise
+    end
+    render :index
   end
 
   private

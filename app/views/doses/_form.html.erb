@@ -1,6 +1,7 @@
 <div class="form-nico">
   <%= simple_form_for [cocktail, dose] do |f| %>
-    <%= f.input :description %>
+    <%= f.input :quantity %>
+    <%= f.input :mesure %>
     <%= f.association :ingredient %>
     <%= f.submit "Add ingredient", class: 'form-control' %>
   <% end %>

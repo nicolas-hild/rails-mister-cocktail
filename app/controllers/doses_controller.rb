@@ -1,5 +1,5 @@
 class DosesController < ApplicationController
-  before_action :set_cocktail, only: %i[index new create edit update destroy]
+  before_action :set_cocktail, only: %i[index new create]
   before_action :set_dose, only: %i[edit update destroy]
 
   def index
@@ -23,16 +23,18 @@ class DosesController < ApplicationController
   end
 
   def update
+    cocktail = @dose.cocktail
     if @dose.update(dose_params)
-      redirect_to cocktail_path(@cocktail)
+      redirect_to cocktail_path(cocktail)
     else
       render :edit
     end
   end
 
   def destroy
+    cocktail = @dose.cocktail
     @dose.destroy
-    redirect_to cocktail_path(@cocktail)
+    redirect_to cocktail_path(cocktail)
   end
 
   private
@@ -46,6 +48,6 @@ class DosesController < ApplicationController
   end
 
   def dose_params
-    params.require(:dose).permit(:description, :ingredient_id)
+    params.require(:dose).permit(:quantity, :mesure, :ingredient_id)
   end
 end

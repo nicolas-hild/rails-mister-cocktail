@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 2019_11_14_134306) do
   end
 
   create_table "doses", force: :cascade do |t|
-    t.string "description"
+    t.integer "quantity"
+    t.string "mesure"
     t.bigint "cocktail_id"
     t.bigint "ingredient_id"
     t.datetime "created_at", null: false

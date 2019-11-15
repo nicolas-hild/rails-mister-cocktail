@@ -5,15 +5,18 @@
   background-color: #C9D1D3;
   border-radius: 50px;
   font-weight: bold;
+  display: flex;
+  text-decoration: none;
   &:hover {
-  background-color: grey;
+    background-color: grey;
+    color: white;
   }
 }
 
-.btn-nico a {
-  color: #1B2A49;
+a:hover {
   text-decoration: none;
-  &:hover {
-    color: white;
-  }
+}
+
+.btn-nico p {
+  margin: 0;
 }

@@ -13,7 +13,7 @@
   margin-top: 15px;
 }
 
-.ingrediensts-bloc {
+.ingredients-bloc {
   width: 20vw;
   padding: 15px;
   background-color: white;
@@ -34,4 +34,44 @@
 .ingredient-list-name h3 {
   text-align: center;
   font-weight: bolder;
+}
+
+.btn-modifiers {
+  width: 20vw;
+  border-radius: 10px;
+}
+
+.edit, .remove, .add-ingredient {
+  text-align: center;
+  margin-top: 10px;
+  background-color: #465881;
+  border-radius: 10px;
+  padding: 5px 15px;
+  font-weight: bold;
+  &:hover {
+    background-color: #5231B3;
+  }
+}
+
+.btn-modifiers p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 0;
+  margin: 0;
+  &:hover{
+    color: white;
+  }
+}
+
+.dose {
+  display: none;
+}
+
+.blue {
+  color: #465881;
+  margin-right: 5px;
 }
